@@ -6,13 +6,13 @@ var SWIFTCOMPLETE_API_KEY        = "235151ba-9253-49ae-9faa-554da7ddecaa";
 e.swiftcomplete = e.swiftcomplete || {};
 var s = t.createElement("script");
 s.async = !0, s.src = c;
-var r = t.getElementsByTagName("script")[0]; // FIXED: Restored strict vendor [0] array mapping
+var r = t.getElementsByTagName("script")[0]; 
 if (r && r.parentNode) {
     r.parentNode.insertBefore(s, r);
 } else {
     t.head.appendChild(s);
 }
-    }(window, document, "https://swiftcomplete.com");
+    }(window, document, "https://assets.swiftcomplete.com/js/swiftlookup.js");
 
 /* ---------- 3.  DYNAMIC OBSERVATION ENGINE ------------------------------ */
 (function() {
@@ -57,7 +57,7 @@ if (r && r.parentNode) {
                             { field: document.querySelector('input[name="organization"]') , format: "Company" }
                         ],
 
-                        /* --- THE DATA SYNC ENGINE --- */
+                        /* --- FORCE DATA SYNC --- */
                         populateResult: function(result) {
                             this.constructor.prototype.options.populateResult.call(this, result);
 
